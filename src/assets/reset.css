@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ============================================ */
+
+/* リセット */
+
+/* ============================================ */
+
+
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; /* iOSの向き変更後のフォントサイズ調整 */
+  -webkit-tap-highlight-color: transparent; /* iOSリンクの灰色*/
+	font-size: 62.5%;
+	font-feature-settings: "palt";
+	-webkit-font-feature-settings: "palt";
+	-moz-font-feature-settings: "palt";
+word-break: break-all;
+}
+body,
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+main {
+  display: block;
+}
+
+/* リセット-見出し */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* リセット-テキスト関連 */
+/* ============================================ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: .2s;
+    border: solid 1px;
+    padding: .5rem 2rem .5rem 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+a:hover {
+	transition: .3s;
+	text-decoration-color: transparent;
+}
+abbr[title] {
+  border-bottom: none; /* Chromeの下枠削除 */
+  text-decoration: underline; /* テキスト装飾を追加 */
+  text-decoration: underline dotted; /* テキスト装飾を追加 */
+}
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* ブラウザでフォントサイズの継承とスケーリングを修正 */
+  font-size: inherit; /* ブラウザで奇数の `em`フォントサイズを修正 */
+}
+small {
+  font-size: 85%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+/* リセット-リスト */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+
+/* リセット-フォーム */
+/* ============================================ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: auto;
+  appearance: auto;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: inherit;
+ border: solid 1px #dddddd;
+    padding: 5px;
+    transition: .2s;
+}
+::placeholder {
+  color: #aaa;
+}
+:-ms-input-placeholder {
+  color: #aaa;
+}
+::-ms-input-placeholder  {
+  color: #aaa;
+}
+
+/* ラジオとチェックボックスの外観をリセットして、iOSでの外観を維持 */
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+[type="radio"] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+/** Edge、IEでオーバーフローを表示. */
+button,
+input {
+  overflow: visible;
+}
+
+/* Edge, Firefox, and IEのテキスト変換の継承を削除 */
+button,
+select {
+  text-transform: none;
+}
+
+/* iOSおよびSafariのクリッカブルタイプの設定 */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled] {
+  cursor: default;
+}
+
+/* Firefox：内側の境界線とパディングを削除 */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* フォーカススタイルを復元 */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* フォーカススタイルを復元 */
+select::-ms-expand {
+  display: none;
+}
+
+/* パディングリセット */
+option {
+  padding: 0;
+}
+
+/* 非表示にリセット */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  color: inherit; /* Correct the color inheritance from `fieldset` elements in IE. */
+  display: table; /* EdgeおよびIEでのテキストの折り返し修正 */
+  max-width: 100%; /* EdgeおよびIEでのテキストの折り返し修正 */
+  padding: 0; /*  `fieldset`要素をゼロにしたときに引っ掛からないように */
+  white-space: normal; /* EdgeおよびIEでのテキストの折り返し修正 */
+}
+
+/* Chrome、Firefox、Operaで正しい垂直方向の配置 */
+progress {
+  vertical-align: baseline;
+}
+
+/* IEのデフォルトの垂直スクロールバーを削除. */
+textarea {
+  overflow: auto;
+}
+
+/* Chromeの増分ボタンと減分ボタンのカーソルスタイルを修正 */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px; /* Safariのアウトラインスタイルを修正 */
+}
+
+/* macOSのChromeとSafariの内側のパディングを削除 */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* iOSおよびSafariのクリッカブルタイプの設定 */
+  font: inherit; /* Safariでフォントのプロパティを「継承」に変更 */
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+/* リセット-テーブル */
+/* ============================================ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th, td {
+	padding: 0;
+	font-weight: normal;
+}
+caption {
+  text-align: left;
+}
+
+
+hr {
+  box-sizing: content-box; /* Firefoxで正しいボックスサイズ */
+  height: 0; /* Firefoxで正しいボックスサイズ */
+  overflow: visible; /* EdgeとIEでオーバーフロー */
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+address {
+  font-style: inherit;
+}
+img {
+  border-style: none;
+  vertical-align: bottom;
+}
+a:hover img {
+	opacity: .7;
+	transition: .3s;
+}
+embed,
+object,
+iframe {
+  border: 0;
+  vertical-align: bottom;
+}
+/* Edge、IE +、Firefoxで正しいディスプレイを追加 */
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+/* IEで正しいディスプレイを追加. */
+template,
+[hidden] {
+  display: none;
+}
+

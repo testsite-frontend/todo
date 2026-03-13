@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+
+html {
+    background: linear-gradient(60deg, rgb(255, 255, 255) 0%, rgb(179, 245, 255) 100%);
+    min-height: 100vh;
+}
+
+body{
+    font-family: 'Noto Sans';
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+		font-display: swap;
+		src: url('./NotoSans_Regular.woff2') format('woff2'),
+		url('./NotoSans_regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*-----------------------------parts-----------------------------*/
+button{
+    font-size: 1.5rem;
+    padding: .5rem 2rem .5rem 2rem;
+}
+button.red,a.red {
+    background-color: #ff3838;
+    color: #fff;
+}
+
+button.red:hover,a.red:hover {
+    background-color: #fff;
+    color: #ff3838;
+    border-color: #ff3838;
+}
+
+button.blue,a.blue {
+    background-color: #1b89ff;
+    color: #fff;
+}
+
+button.blue:hover,a.blue:hover {
+    background-color: #fff;
+    color: #1b89ff;
+    border-color: #1b89ff;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.error {
+    margin-bottom: 20px;
+    color: #ff1818;
+    font-weight: bold;
+}
+
+ h1{
+    margin: 2.5rem 0 2rem 0;
+    font-weight: bold;
+    padding: 0.4em 0.5em;
+    color: #494949;
+    background: #ffffff;
+    border-left: solid 5px #7db4e6;
+    border-bottom: solid 3px #d7d7d7;
+}
+h1,h1 i{
+     font-size: 2rem;
+}
+
+table {
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+table,
+th,
+td {
+  border: 1px solid #333;
+  padding: .5rem 1rem;
+}
+
+th{
+  background-color: #dddddd;
+  font-weight: bold;  
+  width: 18rem;
+}
+
+
+
+label {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+
+
+a.home {
+    color: #0035ff;
+    font-weight: bold;
+    border: solid 1px;
+    padding: .2rem 2rem;
+}
+
+
+p.success {
+    margin-bottom: 1rem;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    background: #1b89ff;
+    padding: 2rem 5rem;
+    opacity: 0;
+    left: 10px;
+    transition: .2s;
+    z-index: 20;
+    
+}
+
+p.success.fadesuccess {
+
+    opacity: 1;
+
+    
+}
+
+
+input[type="text"],input[type="email"],input[type="password"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #9f9f9f;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
+  border-color: #7db4e6;
+  box-shadow: 0 0 0 4px rgba(110, 163, 219, 0.2);
+}
+
+.flex {
+    display: flex;
+}
+
+.margin-unset{
+    margin: unset !important;
+}
+
+/*-----------------------------コンテンツ-----------------------------*/
+
+
+.parent {
+    width: 90%;
+    margin: auto;
+    max-width: 90rem;
+    position: relative;
+    z-index: 1;
+}
+
+.task_input {
+    margin-bottom: 1rem;
+}
+
+section.taskbox {
+background: #ffffff;
+    padding: 1rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 4px 1px #a7a7a7;
+    position: relative;
+    cursor: grab;
+}
+
+
+section.taskbox .flex {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0px 0 0;
+        border-top: solid 1px #dddddd;
+    padding-top: 1.5rem;
+}
+
+section.input_box {
+    margin-bottom: 3rem;
+    border-bottom: solid 2px #9f9f9f;
+    padding-bottom: 3rem;
+}
+
+section.input_box button {
+    display: block;
+    width: 15rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+section.taskbox.complete {
+    border: solid 5px #1b89ff;
+}
+
+section.taskbox.bad {
+    border: solid 5px #ff1b43;
+}
+
+span.Annotation {
+    font-size: 1.4rem;
+    color: #9f9f9f;
+    margin-bottom: 1rem;
+    display: block;
+}
+.logoutbox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 3rem;
+    background-color: rgb(117 117 117 / 30%);
+    z-index: 10;
+}
+
+
+
+.success {
+  animation: fadeout 3s forwards;
+}
+
+section.taskbox p{
+    position: relative;
+    color: #000000;
+    line-height: 1.4;
+    padding: 0.5em 0.5em 0.5em 1.8em;
+    margin-bottom: 1rem;
+}
+
+section.taskbox p:before{
+font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f4ad";
+      position: absolute;
+    left : 0.3em;
+}
+
+section.taskbox h2 {
+    position: relative;
+    color: #000000;
+    background: #f7f7f7;
+    line-height: 1.4;
+    padding: 0.5em 0.5em 0.5em 1.8em;
+    margin-bottom: 1rem;
+}
+
+
+
+section.taskbox h2:before {
+font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f15c";
+    position: absolute;
+    left : 0.5em;
+}
+
+
+span.check {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    font-size: 3rem;
+}
+
+span.check:before {
+    color:#ff3838;
+font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "";
+}
+
+span.check.bad:before {
+  content: "\f057"; 
+}
+
+span.check.complete:before {
+
+  content: "\f00c";
+}
+
+
+
+
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.weve {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+
+/*---------------------------sp-----------------------------*/
+
+@media (max-width: 762px) {
+
+
+td,th{
+    display: block;
+    width: 100%;
+}
+
+}
