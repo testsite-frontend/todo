@@ -1,20 +1,21 @@
 # Vue3 Supabase TODO App
-
 Vue3 + Pinia + Supabase + TypeScriptで作成したタスク管理アプリです。
 ユーザー認証付きのTODO管理と、ドラッグ&ドロップによる並び替え機能を実装しています。
 
 ---------
 
 ## Demo
-
-https://xxxx.vercel.app
-
+https://todo-lemon-psi-58.vercel.app/
 ※アカウント登録後に利用できます
 
 ---------
 
-## Features
+## Source Code
+https://github.com/testsite-frontend/todo
 
+---------
+
+## Features
 ・ユーザー登録 / ログイン  
 ・TODO作成 / 編集 / 削除 (CRUD)  
 ・ドラッグ&ドロップによる並び替え  
@@ -25,9 +26,7 @@ https://xxxx.vercel.app
 ---------
 
 ## Tech Stack
-
 Frontend
-
 - Vue3
 - TypeScript
 - Vue Router
@@ -35,7 +34,6 @@ Frontend
 - vuedraggable
 
 Backend
-
 - Supabase
 - Supabase Auth
 - Supabase Database
@@ -48,9 +46,7 @@ Vue Components
 ↓
 Pinia Store (task / auth / notify)
 ↓
-Supabase Client
-↓
-Supabase Database (PostgreSQL)
+Supabase
 
 ---------
 
