@@ -80,7 +80,7 @@ src
 
 ### 1. Router Guard
 未ログインユーザーがアクセスできないように制御
-
+```
 router.beforeEach(async (to) => {
     const auth = useAuthStore()
 
@@ -92,11 +92,12 @@ router.beforeEach(async (to) => {
         return '/login'
     }
 })
+```
 
 ### 2. Drag & Drop Sorting
 タスクをドラッグで並び替え、  
 positionカラムを更新して保存
-
+```
 const updateOrder = async () => {
     await Promise.all(
         useStore.taskArrays.map((task, index) =>
@@ -104,16 +105,17 @@ const updateOrder = async () => {
         )
     )
 }
+```
 
 ### 3. State Management
 Piniaを使ってタスク管理
-
+```
 export const taskStore = defineStore('taskStore',{
     state: () => ({
        taskArrays: []
     })
 })
-
+```
 
 ## Database
 
