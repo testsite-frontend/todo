@@ -52,25 +52,29 @@ Supabase
 
 ## Folder Structure
 
+## Folder Structure
+
+```
 src
-├ components
-│ └ Header.vue
-├ views
-│ ├ Home.vue
-│ ├ Edit.vue
-│ ├ Show.vue
-│ ├ Login.vue
-│ └ Register.vue
-├ stores
-│ ├ task.ts
-│ ├ auth.ts
-│ └ notify.ts
-├ router
-│ └ index.ts
-├ types
-│ └ todo.ts
-├ supabase.ts
-└ main.ts
+├─ components
+│  └─ Header.vue
+├─ views
+│  ├─ Home.vue
+│  ├─ Edit.vue
+│  ├─ Show.vue
+│  ├─ Login.vue
+│  └─ Register.vue
+├─ stores
+│  ├─ task.ts
+│  ├─ auth.ts
+│  └─ notify.ts
+├─ router
+│  └─ index.ts
+├─ types
+│  └─ todo.ts
+├─ supabase.ts
+└─ main.ts
+```
 
 ---------
 
@@ -92,7 +96,6 @@ router.beforeEach(async (to) => {
 })
 
 ### 2. Drag & Drop Sorting
-
 タスクをドラッグで並び替え、  
 positionカラムを更新して保存
 
@@ -105,7 +108,6 @@ const updateOrder = async () => {
 }
 
 ### 3. State Management
-
 Piniaを使ってタスク管理
 
 export const taskStore = defineStore('taskStore',{
