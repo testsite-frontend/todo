@@ -52,8 +52,6 @@ Supabase
 
 ## Folder Structure
 
-## Folder Structure
-
 ```
 src
 ├─ components
