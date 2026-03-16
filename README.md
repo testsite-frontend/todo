@@ -41,13 +41,13 @@ Backend
 ---------
 
 ## Architecture
-
+```
 Vue Components
 ↓
 Pinia Store (task / auth / notify)
 ↓
 Supabase
-
+```
 ---------
 
 ## Folder Structure
