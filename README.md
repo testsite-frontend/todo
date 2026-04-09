@@ -1,12 +1,14 @@
-# Vue3 Supabase TODO App
+# 概要
 Vue3 + Pinia + Supabase + TypeScriptで作成したタスク管理アプリです。
 ユーザー認証付きのTODO管理と、ドラッグ&ドロップによる並び替え機能を実装しています。
 
 ---------
 
-## Demo
+## デモアカウント
 https://todo-lemon-psi-58.vercel.app/
-※アカウント登録後に利用できます
+email: chat-app-user1@gmail.com
+password: asdfasdf
+
 
 ---------
 
@@ -15,7 +17,7 @@ https://github.com/testsite-frontend/todo
 
 ---------
 
-## Features
+## 主な機能
 ・ユーザー登録 / ログイン  
 ・TODO作成 / 編集 / 削除 (CRUD)  
 ・ドラッグ&ドロップによる並び替え  
@@ -25,7 +27,7 @@ https://github.com/testsite-frontend/todo
 
 ---------
 
-## Tech Stack
+## 使用技術
 Frontend
 - Vue3
 - TypeScript
@@ -40,17 +42,7 @@ Backend
 
 ---------
 
-## Architecture
-```
-Vue Components
-↓
-Pinia Store (task / auth / notify)
-↓
-Supabase
-```
----------
-
-## Folder Structure
+## ディレクトリ構成
 
 ```
 src
@@ -76,7 +68,7 @@ src
 
 ---------
 
-## Key Implementation
+## 工夫した点
 
 ### 1. Router Guard
 未ログインユーザーがアクセスできないように制御
